@@ -1,65 +1,52 @@
-import Image from "next/image";
-
-export default function Home() {
+export default function EditorialClassic() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="min-h-screen bg-[#F9F7F2] flex flex-col items-center justify-center p-4 md:p-8 font-serif selection:bg-orange-100">
+      {/* Header: AI Status & Navigation [cite: 14, 15] */}
+      <header className="fixed top-0 w-full max-w-6xl flex justify-between p-8 text-[10px] tracking-[0.2em] uppercase opacity-60">
+        <div className="font-bold tracking-tighter text-lg italic">SULERTIA<span className="text-[8px] align-top ml-0.5">MEDIA</span></div>
+        <div className="flex gap-10 items-center">
+          <div className="flex items-center gap-2">
+            <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
+            AI Scanning
+          </div>
+          <button className="hover:line-through transition-all">History Vault</button>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </header>
+
+      {/* Main Content Card [cite: 13] */}
+      <article className="relative max-w-4xl w-full bg-[#FCFAF7] p-8 md:p-20 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.05)] border border-black/5 leading-relaxed group">
+        <div className="flex justify-between items-center mb-10 text-[10px] uppercase tracking-widest opacity-40">
+          <div className="flex gap-4">
+            <span className="text-orange-700">Science & Technology</span>
+            <span>Today, 14:32 UTC</span>
+          </div>
+          <div className="text-green-700 font-bold border border-green-700/20 px-2 py-0.5 rounded-sm bg-green-50/50">
+            ↑ Score 9.4
+          </div>
         </div>
-      </main>
-    </div>
+
+        <h1 className="text-4xl md:text-6xl font-medium mb-10 text-[#1a1a1a] leading-[1.1] tracking-tight">
+          The EU Approves First Binding <span className="italic text-orange-800/80 underline decoration-1 underline-offset-8">AI Governance</span> Framework
+        </h1>
+
+        <p className="text-lg md:text-xl font-sans font-light text-black/70 mb-12 max-w-2xl">
+          In a historic session in Brussels, the European Parliament passed the landmark AI Act, establishing the world's first comprehensive, legally binding rules for artificial intelligence systems.
+        </p>
+
+        <footer className="flex justify-between items-center pt-8 border-t border-black/5 mt-16">
+          <span className="text-[10px] opacity-30 uppercase tracking-widest">Via Reuters / Associated Press</span>
+          <button className="text-sm font-sans border-b border-black/20 hover:border-black transition-colors pb-1">Read full story →</button>
+        </footer>
+      </article>
+
+      {/* Bottom Info [cite: 14] */}
+      <footer className="fixed bottom-8 text-[10px] opacity-30 uppercase tracking-[0.3em] flex flex-col items-center gap-4">
+        <div className="flex items-center gap-4">
+          <div className="w-12 h-[1px] bg-black/20"></div>
+          Analysing 847 breaking stories
+          <div className="w-12 h-[1px] bg-black/20"></div>
+        </div>
+      </footer>
+    </main>
   );
 }
