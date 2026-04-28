@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  background: black;
+  overflow: hidden;
+  font-family: monospace;
+}
+
+/* MOVING CONTAINER */
+.robot-wrapper {
+  position: fixed;
+  bottom: 20px;
+  left: -150px;
+  width: 140px;
+
+  will-change: transform;
+}
+
+/* 10 second move */
+.move {
+  animation: moveAcross 10s linear forwards;
+}
+
+/* TIMER ABOVE ROBOT */
+#timer {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+  white-space: nowrap;
+  text-shadow: 0 0 5px black;
+}
+
+/* ROBOT VIDEO */
+.robot {
+  width: 100%;
+  display: block;
+}
+
+.square {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: black;
+  width: 20px;
+  height: 20px;
+}
+
+@keyframes moveAcross {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(100vw + 300px));
+  }
+}
