@@ -24,7 +24,7 @@ export function AdEditorial() {
         </button>
       </div>
     </div>
-  )
+  );
 }
 
 export function AdBold() {
@@ -53,31 +53,5 @@ export function AdBold() {
         </button>
       </div>
     </div>
-  )
-}
-
-export function AdMinimal() {
-  return (
-    <div className="my-4">
-      <p className="text-center text-[8px] tracking-[2px] uppercase text-white/20 mb-2 font-lora">
-        · Sponsored ·
-      </p>
-      <div className="border-t border-b border-white/10 py-3 flex justify-between items-center gap-4">
-        <div className="flex items-center gap-3">
-          <div className="w-9 h-9 bg-[#1e1c15] border border-[#C8A96E]/15 flex-shrink-0" />
-          <div>
-            <p className="text-[7px] tracking-[2px] uppercase text-[#C8A96E]/50 font-lora mb-0.5">
-              Sponsored · Linear
-            </p>
-            <p className="font-playfair font-bold text-[11px] text-[#F5F0E8]/70">
-              Project management, reimagined.
-            </p>
-          </div>
-        </div>
-        <button className="text-[8px] tracking-[1px] uppercase text-[#C8A96E]/60 font-lora border-b border-[#C8A96E]/30 pb-px whitespace-nowrap">
-          Visit
-        </button>
-      </div>
-    </div>
-  )
+  );
 }
