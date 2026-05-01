@@ -136,3 +136,16 @@ export default async function Page() {
     </main>
   );
 }
+
+const checkConnection = async () => {
+  const { data, error } = await supabase
+    .from('posts')
+    .select('*')
+    .limit(1);
+
+  if (error) {
+    console.error("❌ კავშირის შეცდომა:", error.message);
+  } else {
+    console.log("✅ კავშირი წარმატებულია! მონაცემები:", data);
+  }
+};
